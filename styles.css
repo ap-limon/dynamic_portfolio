@@ -4,19 +4,23 @@
   box-sizing: border-box;
 }
 
+html {
+  font-size: 16px;
+}
+
 body {
   font-family: "Arial", sans-serif;
   background-color: #f9f9f9;
   color: #333;
-  margin: 0;
+  line-height: 1.6;
 }
 
 a {
   text-decoration: none;
-  color: inherit;
+  color: #007bff;
 }
 a:hover {
-  color: #007bff;
+  color: #0056b3;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -26,6 +30,141 @@ h1, h2, h3, h4, h5, h6 {
 
 p {
   color: #555;
+  margin-bottom: 1em;
+}
+
+input, textarea, select {
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid #ccc;
+  padding: 0.5em;
+  border-radius: 4px;
+  background-color: #fff;
+  color: #333;
+  margin-bottom: 1em;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em;
+}
+
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  padding: 1em;
+}
+
+header {
+  background: linear-gradient(135deg, #fff 0%, #f0f0f0 100%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1rem 0;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  transition: background 0.3s ease;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+header .brand h1 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+  font-size: 2rem;
+  letter-spacing: 0.1rem;
+  color: #333;
+  text-transform: uppercase;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+header .brand h1:hover {
+  color: #007bff;
+  transform: scale(1.2);
+}
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+header nav ul li {
+  margin-left: 2rem;
+}
+header nav ul li:hover {
+  transform: scale(1.2);
+}
+header nav ul li a {
+  color: #333;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+header nav ul li a:hover {
+  color: #007bff;
+  text-shadow: 0 2px 4px rgba(0, 153, 255, 0.5);
+}
+header .mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+}
+header .mobile-menu-icon span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #333;
+  margin: 4px 0;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  header .nav-links {
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #fff;
+    width: 100%;
+    height: 0;
+    overflow: hidden;
+    flex-direction: column;
+    align-items: center;
+    transition: height 0.3s ease;
+  }
+  header .nav-links li {
+    margin: 1rem 0;
+  }
+  header .mobile-menu-icon {
+    display: block;
+  }
+  header .nav-links.active {
+    height: 230px;
+  }
 }
 
 /*# sourceMappingURL=styles.css.map */
