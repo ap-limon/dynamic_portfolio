@@ -1,0 +1,141 @@
+.glass-effect {
+  background: rgba($color: #5af, $alpha: 0.3);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 1rem;
+  box-shadow: 0 4px 12px rgba($color: #000000, $alpha: 0.2);
+  height: 95%;
+  margin: 2rem 1rem;
+}
+
+.welcome-section {
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    rgba($color: #fff, $alpha: 0.7),
+    rgba($color: #fff, $alpha: 0.9)
+  );
+  padding: 5rem 2rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  .welcome-content {
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      font-family: "Pacifico", cursive;
+      font-weight: 400;
+      animation: fadeIn 2s ease-in;
+    }
+    p {
+      font-family: "Poppins", sans-serif;
+      font-weight: 400;
+      font-size: 1.5rem;
+      margin-bottom: 2rem;
+      line-height: 1.6;
+      animation: fadeIn 2s 0.5s ease-in;
+    }
+    .btn-primary {
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 0.75rem 1.5rem;
+      border-radius: 25px;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: bakcground-color 0.3s ease, transform 0.3s ease;
+      display: inline-block;
+
+      &:hover {
+        background-color: #032850;
+        transform: scale(1.1);
+      }
+    }
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .welcome-section {
+    padding: 4rem 1.5rem;
+
+    .welcome-content {
+      h1 {
+        font-size: 2.5rem;
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .glass-effect {
+    margin: 3.5rem 1rem;
+  }
+  .welcome-section {
+    padding: 3rem 1rem;
+
+    .welcome-content {
+      h1 {
+        font-size: 2rem;
+      }
+      p {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+      }
+      .btn-primary {
+        padding: 2rem 1rem;
+        font-size: 0.9rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .glass-effect {
+    height: 70%;
+  }
+  .welcome-section {
+    padding: 3rem 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .welcome-content {
+      h1 {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
+      .btn-primary {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.8rem;
+      }
+    }
+  }
+}
