@@ -15,7 +15,7 @@
     rgba($color: #fff, $alpha: 0.7),
     rgba($color: #fff, $alpha: 0.9)
   );
-  padding: 5rem 2rem;
+  padding: 7rem 3rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -116,10 +116,10 @@
 
 @media (max-width: 480px) {
   .glass-effect {
-    height: 70%;
+    height: 90%;
   }
   .welcome-section {
-    padding: 3rem 0.5rem;
+    padding: 9rem 0.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
