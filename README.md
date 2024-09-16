@@ -50,4 +50,4 @@ Provide instructions on how to use the project once it’s running.
 Contributions are welcome! Please fork the repository and submit a pull request for any improvements or bug fixes.
 
 ## Live Demo
-Check out the live version of the portfolio here: [Live Demo](https://yourportfoliolink.com)
+Check out the live version of the portfolio here: [Live Demo](https://dynamic-filterable-portfolio.netlify.app/)
