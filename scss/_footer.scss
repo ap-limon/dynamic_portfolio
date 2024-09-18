@@ -1,0 +1,48 @@
+.footer {
+    background-color: #12ace9;
+    padding: 2rem 1rem;
+    text-align: center;
+    color: #fff;
+    font-size: 1rem;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p {
+        margin-bottom: 1rem;
+    }
+
+    .social-links {
+        list-style: none;
+        padding: 0;
+        display: flex;
+        gap: 1rem;
+
+        li {
+            a{
+                color: #fff;
+                font-size: 1.5rem;
+                transition: transform .3s ease, color .3s ease;
+
+                &:hover {
+                    color: #007bff;
+                    transform: scale(1.2);
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        font-size: .9rem;
+        padding: 1.5rem 1rem;
+
+        .social-links li a {
+            font-size: 1.2rem;
+        }
+    }
+}
