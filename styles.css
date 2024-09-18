@@ -489,5 +489,89 @@ header .mobile-menu-icon span {
     height: auto;
   }
 }
+.contact-section {
+  background: linear-gradient(135deg, rgba(0, 123, 255, 0.8), rgba(255, 255, 255, 0.8));
+  backdrop-filter: blur(15px);
+  padding: 5rem 2rem;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+.contact-section .container {
+  width: 100%;
+  max-width: 800px;
+}
+.contact-section .contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.contact-section .contact-form .form-group {
+  display: flex;
+  flex-direction: column;
+}
+.contact-section .contact-form .form-group label {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  columns: #333;
+}
+.contact-section .contact-form .form-group input,
+.contact-section .contact-form .form-group textarea {
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background-color: rgba(255, 255, 255, 0.9);
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+}
+.contact-section .contact-form .form-group input:hover,
+.contact-section .contact-form .form-group textarea:hover {
+  border-color: #007bff;
+}
+.contact-section .contact-form .form-group input:focus,
+.contact-section .contact-form .form-group textarea:focus {
+  outline: none;
+  border-color: #00ff7b;
+}
+.contact-section .contact-form .error-box {
+  color: #fff;
+  background-color: #ff4d4d;
+  padding: 0.75rem;
+  text-align: center;
+  border-radius: 5px;
+  font-weight: bold;
+  display: none;
+}
+.contact-section .contact-form .submit-btn {
+  padding: 0.75rem 2rem;
+  background-color: #007bff;
+  column-rule: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease, border-width 0.3s ease-in-out;
+}
+.contact-section .contact-form .submit-btn:hover {
+  background-color: #0056b3;
+  border-width: 100%;
+}
+
+@media (max-width: 768px) {
+  .contact-form .form-group input,
+  .contact-form .form-group textarea {
+    font-size: 0.9rem;
+  }
+  .submit-btn {
+    font-size: 1rem;
+    padding: 0.6rem 1.5rem;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */

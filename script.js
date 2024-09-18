@@ -109,9 +109,43 @@ const displayProjects = (projects) => {
 
 displayProjects(projects);
 
-filterSelect.addEventListener("change", e => {
+filterSelect.addEventListener("change", (e) => {
   const selectedCategory = e.target.value;
-  console.log(e.target.value)
-  const filteredProjects = selectedCategory === "all" ? projects : projects.filter(project => project.category === selectedCategory);
+  console.log(e.target.value);
+  const filteredProjects =
+    selectedCategory === "all"
+      ? projects
+      : projects.filter((project) => project.category === selectedCategory);
   displayProjects(filteredProjects);
-})
+});
+
+//form validation starts from here
+document.getElementById("contactForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const subject = document.getElementById("subject").value.trim();
+  const message = document.getElementById("message").value.trim();
+  const errorBox = document.getElementById("error-box");
+
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; //email validation
+
+  if (
+    name === "" ||
+    subject === "" ||
+    !emailPattern.test(email) ||
+    message.length < 10
+  ) {
+    errorBox.classList.remove("hidden");
+    errorBox.style.display = "block";
+  } else {
+    errorBox.style.display = "none";
+    alert("Form submitted successfully!");
+
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("subject").value = "";
+    document.getElementById("message").value = "";
+  }
+});

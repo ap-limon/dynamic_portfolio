@@ -114,6 +114,54 @@
           </div>
         </div>
       </section>
+
+      <section id="contact" class="contact-section">
+        <div class="container">
+          <h2>Contact Me</h2>
+          <form action="#" id="contactForm" class="contact-form">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Enter your name here"
+              />
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input
+                type="text"
+                name="email"
+                id="email"
+                placeholder="abc@email.com"
+              />
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input
+                type="text"
+                name="subject"
+                id="subject"
+                placeholder="Subject"
+              />
+            </div>
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea
+                name="message"
+                id="message"
+                rows="4"
+                placeholder="Enter your message here. AT least 10words"
+              ></textarea>
+            </div>
+            <div id="error-box" class="error-box hidden">
+              Please fill in all fields correctly.
+            </div>
+            <button class="submit-btn" type="submit">Send Message</button>
+          </form>
+        </div>
+      </section>
     </main>
     <footer></footer>
     <script src="./script.js"></script>
